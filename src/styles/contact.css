@@ -1,0 +1,208 @@
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255, 182, 138, 0.34), transparent 34%),
+    radial-gradient(circle at top right, rgba(188, 45, 35, 0.14), transparent 26%),
+    radial-gradient(circle at bottom left, rgba(243, 197, 122, 0.28), transparent 28%),
+    linear-gradient(180deg, #fff8ee 0%, #f8ece0 45%, #f6e4d7 100%);
+  color: #351914;
+}
+
+.contact-page::before {
+  content: "";
+  position: absolute;
+  top: 110px;
+  right: -90px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 190, 120, 0.25), rgba(255, 190, 120, 0));
+  pointer-events: none;
+}
+
+.contact-page::after {
+  content: "";
+  position: absolute;
+  left: -100px;
+  bottom: 60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(188, 45, 35, 0.12), rgba(188, 45, 35, 0));
+  pointer-events: none;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 28px;
+  padding-bottom: 54px;
+}
+
+.contact-sticker-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: -28px;
+  margin-bottom: -18px;
+}
+
+.contact-sticker {
+  width: min(200px, 48vw);
+  height: auto;
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 12px 18px rgba(143, 31, 33, 0.15));
+  pointer-events: none;
+  user-select: none;
+}
+
+.contact-hero {
+  max-width: 720px;
+  margin: 0 auto 34px;
+}
+
+.contact-eyebrow {
+  margin: 0 0 10px;
+  color: #b64033;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  color: #3d1915;
+  font-size: clamp(2.2rem, 5vw, 4.1rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.contact-subtitle {
+  margin: 16px auto 0;
+  max-width: 34rem;
+  color: #6d473d;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.contact-links-shell {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 26px;
+  border: 1px solid rgba(143, 31, 33, 0.1);
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 246, 237, 0.5));
+  box-shadow: 0 22px 50px rgba(122, 52, 35, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.contact-links-intro {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.contact-links-intro p {
+  margin: 0;
+  color: #8d5849;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 8px;
+  color: inherit;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.contact-link-row + .contact-link-row {
+  border-top: 1px dashed rgba(143, 31, 33, 0.18);
+}
+
+.contact-link-row:hover {
+  transform: translateX(4px);
+  color: #7f231f;
+}
+
+.contact-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #b9332a, #8f1f21);
+  color: #fff4eb;
+  box-shadow: 0 14px 22px rgba(185, 51, 42, 0.2);
+}
+
+.contact-link-text {
+  display: flex;
+  flex: 1;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.contact-label {
+  color: #7c4437;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  color: #341712;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.contact-link-arrow {
+  color: #b64033;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .contact-content {
+    padding-top: 18px;
+    padding-bottom: 34px;
+  }
+
+  .contact-hero {
+    margin-bottom: 28px;
+  }
+
+  .contact-links-shell {
+    padding: 20px 16px;
+    border-radius: 26px;
+  }
+
+  .contact-link-row {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 4px;
+  }
+
+  .contact-link-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .contact-link-arrow {
+    display: none;
+  }
+}

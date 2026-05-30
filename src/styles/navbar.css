@@ -1,0 +1,106 @@
+.app-navbar {
+  position: relative;
+  padding: 9px 16px;
+  background: #661718;
+  border-bottom: 1px solid rgba(243, 197, 122, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.app-navbar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.app-navbar-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 229, 196, 0.08);
+  border-radius: 22px;
+  backdrop-filter: blur(6px);
+}
+
+.app-navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-main) !important;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.03px;
+  white-space: nowrap;
+  transition: transform 180ms ease, color 180ms ease;
+}
+
+.app-navbar-brand:hover {
+  color: #fff0d8 !important;
+  transform: translateY(-1px);
+}
+
+.app-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.app-navbar-links .nav-link {
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: var(--text-soft);
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.app-navbar-links .nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--brand-gold);
+  transform: translateY(-1px);
+  border-color: rgba(243, 197, 122, 0.16);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 767px) {
+  .app-navbar {
+    padding: 8px 12px;
+  }
+
+  .app-navbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 14px;
+    border-radius: 18px;
+  }
+
+  .app-navbar-brand {
+    font-size: 20px;
+  }
+
+  .app-navbar-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px 16px;
+  }
+
+  .app-navbar-links .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

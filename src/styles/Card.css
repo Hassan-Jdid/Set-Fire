@@ -1,0 +1,78 @@
+.menu-card {
+  height: 100%;
+  border: 1px solid rgba(137, 80, 15, 0.295);
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(232, 198, 160, 0.646) ;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(217, 187, 138, 0.32);
+  box-shadow: 0 26px 56px rgba(103, 72, 72, 0.413);
+}
+
+.menu-card-image {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(243, 197, 122, 0.1);
+}
+
+.menu-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 12px;
+}
+
+.menu-card .card-title {
+  margin: 0;
+  color: #2d1710;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.card-price {
+  margin: 0;
+  font-weight: 700;
+  color:#5a3e2c;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.menu-card .btn {
+  margin: 0 16px 16px;
+  padding: 12px 14px;
+  align-self: stretch;
+}
+
+.menu-card .card-btn {
+  color: #ebcece;
+  background: linear-gradient(135deg, #8f1f21e6, #8f1f21e6);
+  border: 1px solid rgba(143, 31, 33, 0.2);
+  box-shadow: 0 14px 24px rgba(185, 51, 42, 0.22);
+  border-radius: 30px;
+}
+
+.menu-card .card-btn:hover,
+.menu-card .card-btn:focus {
+  color: #fff;
+  background: linear-gradient(135deg, #cf3a30, #9d2224);
+  border-color: rgba(143, 31, 33, 0.28);
+  box-shadow: 0 18px 30px rgba(185, 51, 42, 0.28);
+}
+
+@media (max-width: 576px) {
+  .menu-card {
+    border-radius: 16px;
+  }
+
+  .menu-card .card-title {
+    font-size: 18px;
+  }
+}

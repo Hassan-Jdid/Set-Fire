@@ -1,0 +1,85 @@
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    color: var(--text-main);
+}
+
+.home-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../Photos/LogoSetFire.jpeg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(1.2);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.hero {
+    position: relative;
+    z-index: 10;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 88px);
+    padding: 20px;
+    background: transparent;
+}
+
+.hero-content {
+    max-width: 760px;
+    padding: 48px 32px;
+    border: 1px solid rgba(255, 223, 186, 0.12);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(20, 12, 12, 0.56), rgba(20, 12, 12, 0.3));
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(1px);
+}
+
+.hero h1 {
+    font-size: clamp(37px, 5vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+    letter-spacing: -0.04em;
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+    max-width: 60ch;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.8;
+    color: white;
+    margin: 0 auto 32px;
+}
+
+.hero-cta {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: auto;
+        padding: 48px 0 56px;
+    }
+
+    .hero-content {
+        padding: 32px 18px;
+        border-radius: 22px;
+    }
+
+    .hero p {
+        margin-bottom: 24px;
+    }
+
+    .hero-cta {
+        width: 100%;
+        max-width: 320px;
+    }
+}
